@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    {% if product %}
+        <h3>Product Found (Barcode: {{ code }})</h3>
+        <ul>
+            <li><strong>Name:</strong> {{ product['product_name'] }}</li>
+            <li><strong>Ingredients:</strong> {{ product['ingredients_text'] }}</li>
+        </ul>
+    {% elif results %}
+        <h3>Top matches for query: {{ query }}</h3>
+        <ul>
+        {% for code, name, ingredients in results %}
+            <li><b>{{ code }}</b> - {{ name }}<br>Ingredients: {{ ingredients }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>

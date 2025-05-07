@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Barcode Search App</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <h2>Upload a Barcode Image</h2>
+    <form action="/upload" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" accept=".png" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h2>Search by Keyword</h2>
+    <form action="/search" method="post">
+        <input type="text" name="query" placeholder="e.g. chocolate, Nestle" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
