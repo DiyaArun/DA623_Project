@@ -1,4 +1,4 @@
-# 🧾 Barcode Recognition & Product Recognition
+# 🧾 Barcode Recognition & Product Interpretation
 
 This project combines **barcode decoding**, **product lookup**, and **semantic product search** using the [Open Food Facts](https://world.openfoodfacts.org/) dataset. Users can upload barcode images to retrieve nutritional info, or enter natural language queries to find matching food products. The system is built with `pyzbar`, `sentence-transformers`, and `FastAPI`.
 
